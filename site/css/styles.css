@@ -137,7 +137,7 @@ p {
         width: 50%;
     }
     .column-content {
-        background-color: grey;
+        background-color: rgb(172, 172, 172);
         border: 1px solid black;
         height: 100%;
     }
