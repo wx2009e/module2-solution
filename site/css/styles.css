@@ -6,6 +6,10 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.row {
+    width: 100%;
+    padding: 0 10px 0 10px;
+}
 p {
     padding: 0 20px 0 20px;
     margin: 60px 0 20px 0;
@@ -16,11 +20,6 @@ p {
     padding-top: 50px;
     padding-bottom: 50px;
 }
-.columns {
-    background-color: grey;
-    border: 1px solid black;
-}
-
 .col1 {
     background-color: pink;
 }
@@ -30,12 +29,19 @@ p {
 .col3 {
     background-color: tan;
 }
+.column-content {
+    background-color: gray;
+    border: 1px solid black;
+    height: 100%;
+}
+.columns {
+    padding: 10px;
+}
 
 /* Simple Responsive Framework. */
   /********** Large devices only **********/
 @media (min-width: 992px) {
     .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
-        float: left;
     }
     .col-lg-1 {width: 8.33%;
     }
@@ -71,14 +77,12 @@ p {
     .col-lg-12 {
         width: 100%;
     }
-    .columns {
-        background-color: grey;
-        height: 200px;
-        border: 1px solid black;
-    }
+
     .row {
         width: 100%;
-        padding: 1%;
+        padding: 0 10px 0 10px;
+        display: flex;
+        flex-wrap: wrap;
     }
     p {
         padding: 0 20px 0 20px;
@@ -128,17 +132,30 @@ p {
         width: 100%;
     }
     .columns {
+        width: 48%;
+
+    }
+    .columns {
+        padding: 10px;
+        width: 50%;
+    }
+    .column-content {
         background-color: grey;
-        height: 200px;
         border: 1px solid black;
+        height: 100%;
     }
     .column-3 {
         width: 100%;
     }.column-3 > p {
         margin: 50px 0 0 0;
     }
+    .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
-  /********** Small devices only **********/
+  /* ********* Small devices only ********* */
   @media (min-width: 0px) and (max-width: 767px) {
     .col-sm-3, .col-sm-12 {
         float: left;
@@ -150,19 +167,11 @@ p {
         width: 100%;
     }
     .columns {
-        background-color: grey;
-        height: auto;
-        border: 1px solid black;
-    }
-    p {
-        margin: 50px 0 20px 0;
+        width: 100%;
     }
 
 }
-.row {
-    width: 100%;
-    padding: 0 10px 0 10px;
-}
+
 .col1, .col2, .col3 {
     text-align: center;
     font-weight: bold;
